@@ -1,6 +1,19 @@
 import type { NextConfig } from 'next'
 
-import { BACKEND_URL } from '@/constants/site'
+/**
+ * Base URL of the backend API used by Next.js at build and bootstrap time.
+ *
+ * This value is resolved **before** the application runtime starts and is
+ * required during Next.js configuration evaluation (pre-boot).
+ *
+ * ⚠️ This is not a runtime constant.
+ * It must be defined here (or via `process.env`) because `next.config.ts`
+ * is executed directly by Node.js before:
+ * - Module alias resolution
+ * - App Router initialization
+ * - Environment client/server splitting
+ */
+const BACKEND_URL = process.env.NEXT_PUBLIC_API_URL ?? 'http://localhost:8080'
 
 /**
  * Next.js application configuration.
@@ -32,6 +45,18 @@ const nextConfig: NextConfig = {
    */
   devIndicators: {
     position: 'bottom-right',
+  },
+
+  /**
+   * Controls Next.js internal logging behavior.
+   *
+   * This configuration is evaluated at build and runtime by Next.js
+   * and affects how framework-level logs are emitted.
+   */
+  logging: {
+    fetches: {
+      fullUrl: true,
+    },
   },
 
   /**
