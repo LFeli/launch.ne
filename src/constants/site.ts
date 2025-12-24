@@ -13,7 +13,7 @@ const FRONTEND_URL = extractDomain({
  * including the pathname.
  */
 const BACKEND_URL = extractDomain({
-  url: envClient.NEXT_PUBLIC_APP_URL,
+  url: envClient.NEXT_PUBLIC_API_URL,
   includePathname: true,
 })
 
