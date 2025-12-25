@@ -1,5 +1,6 @@
 import { Analytics } from '@vercel/analytics/next'
-import React from 'react'
+import { ThemeProvider } from 'next-themes'
+import type React from 'react'
 import { envClient } from '@/lib/env/client'
 
 interface ProvidersProps {
@@ -13,9 +14,15 @@ export function Providers({ children }: ProvidersProps) {
   const isProduction = envClient.NEXT_PUBLIC_APP_MODE === 'production'
 
   return (
-    <React.Fragment>
+    <ThemeProvider
+      attribute={'class'}
+      defaultTheme="dark"
+      forcedTheme="dark"
+      enableSystem={true}
+      disableTransitionOnChange
+    >
       {children}
       <Analytics mode={isProduction ? 'production' : 'development'} />
-    </React.Fragment>
+    </ThemeProvider>
   )
 }
