@@ -13,7 +13,7 @@ import type { NextConfig } from 'next'
  * - App Router initialization
  * - Environment client/server splitting
  */
-const BACKEND_URL = process.env.NEXT_PUBLIC_API_URL ?? 'http://localhost:8080'
+const BACKEND_URL = process.env.NEXT_PUBLIC_API_URL ?? 'http://localhost:3333'
 
 /**
  * Next.js application configuration.

@@ -9,7 +9,7 @@ export const envClient = createEnv({
   client: {},
   shared: {
     NEXT_PUBLIC_APP_URL: z.url().default('http://localhost:3000'),
-    NEXT_PUBLIC_API_URL: z.url().default('http://localhost:8080'),
+    NEXT_PUBLIC_API_URL: z.url().default('http://localhost:3333'),
     NEXT_PUBLIC_APP_MODE: z
       .enum(['development', 'production', 'test'])
       .default('development'),
