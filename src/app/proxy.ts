@@ -1,10 +1,13 @@
 import { type NextRequest, NextResponse } from 'next/server'
 
 /**
- * Middleware configuration that limits execution to `/example/*` routes.
+ * Middleware configuration that defines which routes the middleware applies to.
+ *
+ * Excludes API routes, Next.js internal assets, image optimization routes,
+ * and PNG files from middleware execution.
  */
 export const config = {
-  matcher: '/example/:path*',
+  matcher: ['/((?!api|_next/static|_next/image|.*\\.png$).*)'],
 }
 
 /**
