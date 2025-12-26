@@ -47,9 +47,29 @@ This project exists to reduce the time spent configuring tools and let you start
 - Centralized metadata & SEO
 
 
-## 🔮 Future Roadmap
+## 🔮 Roadmap
+
+☑️ Core project setup  
+☑️ Type-safe environment variables  
+☑️ Tailwind CSS & UI foundation  
+☑️ Biome linting & formatting  
+☑️ Centralized config & metadata
+☑️ Analytics & Event tracking present
+
 ☐ 🔐 Authentication  
 ☐ 🧑‍💼 Session management  
-☐ 🧪 Testing setup (unit, integration, e2e)  
-☐ 🚀 Deployment configuration (Vercel & Docker)  
-☐ 🤖 Script for automate the creation of news project based in boilerplate
+☐ 🧪 Testing setup  
+  ☐ Unit tests  
+  ☐ Integration tests  
+  ☐ E2E tests 
+
+☐ 🚀 Deployment configuration  
+  ☐ Vercel  
+  ☐ Docker 
+
+☐ 🤖 Project scaffolding script  
+  ☐ Create new projects from the boilerplate  
+  ☐ Interactive setup (name, envs, features)
+
+☐ 📚 Documentation & examples  
+☐ 🧩 Optional integrations
